@@ -1,0 +1,38 @@
+# Ambiente virtual
+venv/
+.env
+.env.*
+
+# Bytecode compilado
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Logs e databases locais
+*.log
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Arquivos de testes ou builds
+*.coverage
+htmlcov/
+coverage.xml
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Cache do pip
+pip-wheel-metadata/
+*.egg
+.cache/
+.tox/
