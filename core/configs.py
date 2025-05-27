@@ -7,7 +7,7 @@ class Settings(BaseSettings):
 
     # URL de conexão com o banco de dados Firebird 4 (driver oficial)
     # Obs: encode a senha corretamente se houver caracteres especiais
-    DB_URL: str = 'firebird://SYSDBA:SW0WJclCDVMhlMviu%2BRI@api_firebird:3050/firebird/data/CARTORIO.FDB'
+    DB_URL: str = 'firebird://SYSDBA:SW0WJclCDVMhlMviu%2BRI@api_firebird:3050/opt/firebird/database/CARTORIO.FDB'
 
     # Chave secreta usada para geração de tokens JWT
     JWT_SECRET: str = 'WYe1zwtlDkh39_X3X3qTSICFDxts4VQrMyGLxnEpGUg'
