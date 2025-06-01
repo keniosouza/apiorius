@@ -2,14 +2,14 @@ from typing import Optional, List
 from fastapi import HTTPException, status # Importe HTTPException e status
 
 # Schemas usados para entrada e saída de dados dos items
-from api.v1.schemas.c_caixa_item_schema import (
+from api.v1.schemas.caixa.c_caixa_item_schema import (
     CCaixaItemSchemaBase,
     CCaixaItemSchemaList,
     CCaixaItemPaginationSchema
 )
 
 # Model responsável pelo acesso ao banco de dados Firebird
-from api.v1.models.c_caixa_item_model import CCaixaItemModel
+from api.v1.models.caixa.c_caixa_item_model import CCaixaItemModel
 
 # Funções para sanitização de entradas (evitar XSS, SQLi etc.)
 from core.validation import InputSanitizer

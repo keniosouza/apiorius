@@ -94,7 +94,7 @@ def get_users(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1), current_
 
 
 @router.get('/{user_id}', response_model=UserSchemaBase, status_code=status.HTTP_200_OK)
-def get_user(user_id: int):
+def get_user(user_id: int, current_user: dict = Depends(get_current_user)):
     """
     Retorna os dados de um usuário específico pelo ID.
     """

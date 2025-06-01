@@ -6,14 +6,14 @@ from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.responses import JSONResponse
 
 # Schemas para entrada e saída de dados (nomes padronizados em inglês)
-from api.v1.schemas.c_caixa_item_schema import (
+from api.v1.schemas.caixa.c_caixa_item_schema import (
     CCaixaItemSchemaBase,
     CCaixaItemSchemaList,
     CCaixaItemPaginationSchema
 )
 
 # Controller responsável pelas regras de negócio e sanitização
-from api.v1.controllers.c_caixa_item_controller import (
+from api.v1.controllers.caixa.c_caixa_item_controller import (
     get_all_caixa_itens,
     get_item_by_id,
     count_items

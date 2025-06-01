@@ -53,7 +53,7 @@ def get_current_user(token: str = Depends(oauth2_schema)) -> dict:
         print(f"Error fetching user in get_current_user: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to retrieve user data."
+            detail=f"Failed to retrieve user data. {str(e)}"
         )
 
     if not user:

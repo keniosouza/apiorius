@@ -6,9 +6,9 @@ class Settings(BaseSettings):
     API_V1_STR: str = '/api/v1'
 
     # URL de conexão com o banco de dados Firebird 4 (driver oficial)
-    # Obs: encode a senha corretamente se houver caracteres especiais
-    # DB_URL: str = 'firebird://SYSDBA:SW0WJclCDVMhlMviu%2BRI@api_firebird:3050/CARTORIO'
-    DB_URL: str = "firebird://SYSDBA:Sun147oi.@185.139.1.35:3050/CARTORIO"
+    # Obs: encode a senha corretamente se houver caracteres especiais    
+    # DB_URL: str = "firebird://SYSDBA:Sun147oi.@185.139.1.35:3050/CARTORIO"
+    DB_URL: str = "firebird://SYSDBA:masterkey.@localhost:3050/CARTORIO"
 
 
     # Chave secreta usada para geração de tokens JWT
