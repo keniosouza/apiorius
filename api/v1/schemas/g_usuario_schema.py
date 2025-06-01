@@ -28,6 +28,7 @@ class UserSchemaUpdate(BaseModel):
     nome_completo: Optional[str] = None   # Atualização do nome, se fornecido
     email: Optional[EmailStr] = None  # Atualização do e-mail, se fornecido
     senha_api: Optional[str] = None    # Atualização da senha, se fornecida
+    telefone: Optional[str] = None    # Atualização do telefone, se fornecida
 
     class Config:
         from_attributes = True

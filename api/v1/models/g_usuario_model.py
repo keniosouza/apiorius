@@ -283,7 +283,7 @@ class UserModel:
                 conn.close()
 
     @staticmethod
-    def update(user_id: int, nome_completo: str | None, email: str | None, senha_api: str | None) -> bool:
+    def update(user_id: int, nome_completo: str | None, email: str | None, senha_api: str | None, telefone: str | None) -> bool:
         """
         Atualiza os dados de um usuário existente.
         Lança exceções se o usuário não for encontrado ou em caso de erro no DB.
