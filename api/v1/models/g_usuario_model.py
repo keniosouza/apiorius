@@ -79,6 +79,7 @@ class UserModel:
                     "user_id": row[0],
                     "nome_completo": row[1],
                     "email": row[2],
+                    "telefone": row[3],
                 }
             return None
         except DatabaseError as e:
