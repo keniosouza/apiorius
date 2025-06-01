@@ -160,6 +160,7 @@ def update_user(user_id: int, user_data: UserSchemaUpdate) -> UserSchemaBase: # 
         nome_completo = InputSanitizer.clean_text(user_data.nome_completo) if user_data.nome_completo else None
         email = InputSanitizer.clean_text(user_data.email) if user_data.email else None
         senha_api = InputSanitizer.clean_text(user_data.senha_api) if user_data.senha_api else None
+        telefone = InputSanitizer.clean_text(user_data.telefone) if user_data.telefone else None
 
         if email and not InputSanitizer.is_valid_email(email):
             raise HTTPException(
@@ -177,7 +178,7 @@ def update_user(user_id: int, user_data: UserSchemaUpdate) -> UserSchemaBase: # 
 
         hashed_senha_api = hash_senha_api(senha_api) if senha_api else None
 
-        success = UserModel.update(user_id, nome_completo, email, hashed_senha_api)
+        success = UserModel.update(user_id, nome_completo, email, hashed_senha_api, telefone)
         if not success:
             # UserModel.update agora lança KeyError/ValueError, então este 'if not success'
             # só seria acionado se houvesse um caso em que nada foi atualizado e não houve erro.
