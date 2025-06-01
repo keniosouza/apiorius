@@ -65,7 +65,10 @@ class UserModel:
             cur = conn.cursor()
 
             cur.execute("""
-                SELECT USUARIO_ID, NOME_COMPLETO, EMAIL
+                SELECT USUARIO_ID, 
+                       NOME_COMPLETO, 
+                       EMAIL,
+                       TELEFONE
                 FROM G_USUARIO
                 WHERE USUARIO_ID = ?
             """, (user_id,))
