@@ -9,6 +9,7 @@ class UserSchemaBase(BaseModel):
     user_id: Optional[int] = None       # ID do usuário (opcional)
     nome_completo: Optional[str] = None     # Nome completo do usuário
     email: Optional[EmailStr] = None    # E-mail validado do usuário
+    telefone: Optional[str] = None    # Telefone validado do usuário
 
     class Config:
         from_attributes = True  # Permite construir a partir de dicts ou ORMs (mesmo sem ORM aqui)
@@ -64,6 +65,7 @@ class UserSchemaList(BaseModel):
     receber_chat_envio_onr: Optional[str]
     tipo_usuario: Optional[str]
     data_cadastro: Optional[datetime]
+    telefone: Optional[str]
 
 
 class UserPaginationSchema(BaseModel):
