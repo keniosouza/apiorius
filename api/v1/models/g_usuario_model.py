@@ -315,6 +315,9 @@ class UserModel:
             if senha_api is not None:
                 updates.append("SENHA_API = ?")
                 params.append(senha_api)
+            if telefone is not None:
+                updates.append("TELEFONE = ?")
+                params.append(telefone)                
 
             if not updates: # Se nenhum campo foi fornecido para atualização
                 return False
