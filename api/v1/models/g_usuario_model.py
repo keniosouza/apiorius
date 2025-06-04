@@ -157,7 +157,8 @@ class UserModel:
                     SOMENTE_LEITURA,
                     RECEBER_CHAT_ENVIO_ONR, 
                     TIPO_USUARIO, 
-                    DATA_CADASTRO
+                    DATA_CADASTRO,
+                    TELEFONE
                 FROM G_USUARIO
                 ORDER BY USUARIO_ID
             """           
