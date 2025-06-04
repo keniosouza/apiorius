@@ -87,10 +87,10 @@ def get_users(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1), current_
     """
     Retorna todos os usuários cadastrados no sistema.
     """
-    usuarios = get_all_users(skip=skip, limit=limit)
+    usuarios = get_all(skip=skip, limit=limit)
     total = count_users()
 
-    return get_all_users(skip=skip, limit=limit)
+    return get_all(skip=skip, limit=limit)
 
 
 @router.get('/{user_id}', response_model=UserSchemaBase, status_code=status.HTTP_200_OK)
