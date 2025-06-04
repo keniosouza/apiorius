@@ -197,6 +197,7 @@ class UserModel:
                     "receber_chat_envio_onr": r[27],
                     "tipo_usuario": r[28],
                     "data_cadastro": r[29],
+                    "telefone": r[30],
                 }
                 for r in rows
             ]
