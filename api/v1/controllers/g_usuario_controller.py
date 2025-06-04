@@ -100,7 +100,7 @@ def create_user(user_data: UserSchemaCreate) -> UserSchemaBase: # Retorno altera
 
 
 # Retorna a lista de todos os usuários cadastrados
-def get_all_users(skip: int = 0, limit: int = 10) -> UserPaginationSchema:
+def get_all(skip: int = 0, limit: int = 10) -> UserPaginationSchema:
     try:
         users = UserModel.get_all(skip=skip, limit=limit)
         total = UserModel.count_users()
