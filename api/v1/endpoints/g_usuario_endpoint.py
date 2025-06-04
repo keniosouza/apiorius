@@ -17,7 +17,7 @@ from api.v1.schemas.g_usuario_schema import (
 from api.v1.controllers.g_usuario_controller import (
     authenticate_user,
     create_user,
-    get_all_users,
+    get_all,
     get_user_by_id,
     update_user,
     delete_user,

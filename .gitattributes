@@ -1,0 +1,9 @@
+# Normaliza finais de linha
+* text=auto
+
+# Força Python e arquivos de configuração a usarem LF
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.env text eol=lf
