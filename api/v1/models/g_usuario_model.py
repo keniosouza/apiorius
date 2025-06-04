@@ -115,7 +115,7 @@ class UserModel:
 
 
     @staticmethod
-    def get_all(skip: int = 0, limit: int = 10) -> list[dict]:
+    def get_all_users(skip: int = 0, limit: int = 10) -> list[dict]:
         """
         Retorna todos os usuários cadastrados no banco de dados.
         Lança exceções em caso de falha no banco de dados.
